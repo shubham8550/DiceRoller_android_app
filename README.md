@@ -1,5 +1,6 @@
 # DiceRoller
 
+<a href="https://www.gnu.org/licenses/gpl-3.0" alt="License: GPLv3"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg"></a>
 [![Build Status](https://travis-ci.org/shubham8550/DiceRoller_android_app.svg?branch=master)](https://travis-ci.org/shubham8550/DiceRoller_android_app)
 
 
