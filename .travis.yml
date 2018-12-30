@@ -1,13 +1,18 @@
 language: android
+jdk:
+    - oraclejdk8
 android:
   components:
-    - extra-android-m2repository
-    - tools # to get the new `repository-11.xml`
-    - tools # see https://github.com/travis-ci/travis-ci/issues/6040#issuecomment-219367943)
-    - platform-tools
-    - build-tools-27.0.3
-    - android-27
-before_install:
-  - yes | sdkmanager "platforms;android-27"
-script:
-   - ./gradlew build connectedCheck
+    # The BuildTools version used by NewPipe
+    - tools
+    - build-tools-28.0.3
+
+    # The SDK version used to compile NewPipe
+    - android-28
+
+before_install: 
+  - yes | sdkmanager "platforms;android-28"
+script: ./gradlew -Dorg.gradle.jvmargs=-Xmx1536m assembleDebug lintDebug testDebugUnitTest
+
+licenses:
+  - '.+'
